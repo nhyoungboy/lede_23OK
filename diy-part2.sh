@@ -16,3 +16,6 @@ sed -i 's/"admin"/"admin", "services"/g' feeds/luci/applications/luci-app-docker
 sed -i 's/"admin"/"admin", "services"/g; s/admin\//admin\/services\//g' feeds/luci/applications/luci-app-dockerman/luasrc/model/cbi/dockerman/*.lua
 sed -i 's/admin\//admin\/services\//g' feeds/luci/applications/luci-app-dockerman/luasrc/view/dockerman/*.htm
 sed -i 's|admin\\|admin\\/services\\|g' feeds/luci/applications/luci-app-dockerman/luasrc/view/dockerman/container.htm
+
+./scripts/feeds update -a
+./scripts/feeds install -a
