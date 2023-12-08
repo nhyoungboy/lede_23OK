@@ -52,7 +52,9 @@ jobs:
         event-type: Source Code Update
 
     - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+      uses: MajorScruffy/delete-old-workflow-runs@v0.2.0
       with:
-        retain_days: 1
-        keep_minimum_runs: 1
+         repository: forseticn/lede_x86_64                   # replace this with your own repository
+         older-than-seconds: 86400                           # remove all workflow runs older than 1 day
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
