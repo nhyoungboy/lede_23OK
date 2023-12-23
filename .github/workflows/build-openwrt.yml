@@ -145,12 +145,19 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete workflow runs
-      uses: GitRML/delete-workflow-runs@main
+    # - name: Delete workflow runs
+    #  uses: GitRML/delete-workflow-runs@main
+    #  with:
+    #    retain_days: 1
+    #    keep_minimum_runs: 3
+
+    - name: Delete Old Workflows
+      uses: Mattraks/delete-workflow-runs@main
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         retain_days: 1
         keep_minimum_runs: 3
-
+    
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.3.2
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
