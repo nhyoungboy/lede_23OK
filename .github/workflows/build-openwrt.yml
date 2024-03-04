@@ -157,7 +157,6 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-
     - name: Delete Old Workflows 删除旧工作流
       uses: Mattraks/delete-workflow-runs@v2
       with:
