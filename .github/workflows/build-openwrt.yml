@@ -23,7 +23,7 @@ env:
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  CACHE_BUILD: true
+  CACHE_BUILD: false
   TZ: Asia/Shanghai
 
 jobs:
