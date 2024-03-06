@@ -23,7 +23,6 @@ env:
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  CACHE_BUILD: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -67,13 +66,6 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
-    - name: Cache Wrt Build action 缓存加速
-      uses: stupidloud/cachewrtbuild@main
-      if: env.CACHE_BUILD == 'true' || (github.event.inputs.CACHE_BUILD == 'true')
-      with:
-        ccache: 'true'
-        prefix: ${{ github.workspace }}/openwrt
 
     - name: Load custom feeds 加载自定义源
       run: |
