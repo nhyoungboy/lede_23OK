@@ -8,11 +8,6 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' package/lean/default-settings/f
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
-# git clone --depth=1 https://github.com/jerrykuku/lua-maxminddb package/lua-maxminddb
-
-# netspeedtest
-git clone https://github.com/sirpdboy/netspeedtest.git package/netspeedtest
-
 # 修改文本
 sed -i 's/"带宽监控"/"宽带"/g' `grep "带宽监控" -rl ./`
 sed -i 's/"Turbo ACC 网络加速"/"Turbo ACC"/g' package/feeds/luci/luci-app-turboacc/po/*/turboacc.po       # `grep "Turbo ACC 网络加速" -rl ./`
