@@ -13,6 +13,11 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# Add a feed source
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+# 添加 onliner 插件
+git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app-onliner
+
+# 添加 PowerOff 插件
+git clone https://github.com/nhhqgirl/luci-app-poweroff.git package/lean/luci-app-poweroff
+
+# 添加 opentomcat 主题
+git clone --depth=1 https://github.com/nhyoungboy/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
