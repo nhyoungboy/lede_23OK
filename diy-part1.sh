@@ -13,8 +13,8 @@
 rm -rf package/lean/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-mosdns
 
-git clone --depth 1 https://github.com/vernesong/OpenClash.git package/lean/luci-app-openclash
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns.git package/lean/luci-app-mosdns
+it clone --depth 1 -b master https://github.com/vernesong/OpenClash.git package/lean/luci-app-openclash
+it clone --depth 1 -b master https://github.com/sbwml/luci-app-mosdns.git package/lean/luci-app-mosdns
 
 # 添加 onliner 插件
 git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app-onliner
