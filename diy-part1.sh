@@ -10,7 +10,7 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-echo 'src-git sbwml https://github.com/sbwml/luci-app-mosdns.git' >>feeds.conf.default
+# echo 'src-git sbwml https://github.com/sbwml/luci-app-mosdns.git' >>feeds.conf.default
 
 # 添加 onliner 插件
 git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app-onliner
