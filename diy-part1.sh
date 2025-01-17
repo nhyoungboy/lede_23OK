@@ -9,10 +9,25 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
-echo 'src-git sbwml https://github.com/sbwml/luci-app-mosdns' >>feeds.conf.default
-echo 'src-git vernesong https://github.com/vernesong/OpenClash' >>feeds.conf.default
+# 移除要替换的包
+rm -rf feeds/packages/lang/golang
+rm -rf feeds/packages/net/mosdns
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf feeds/luci/applications/luci-app-mosdns
+
+# 修复golang版本过低
+git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
+
+# 科学上网插件
+git_sparse_clone master https://github.com/vernesong/OpenClash luci-app-openclash
+
+# MosDNS
+git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+
 
 # 添加 onliner 插件
 git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app-onliner
 
-
+# Themes
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git_sparse_clone main https://github.com/haiibo/packages luci-theme-opentomcat
