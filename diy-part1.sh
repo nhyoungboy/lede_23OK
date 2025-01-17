@@ -13,11 +13,11 @@
 rm -rf feeds/packages/lang/golang
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf package/lean/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-mosdns
 
-git clone --depth=1 https://github.com/vernesong/OpenClash package/lean/luci-app-openclash
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/lean/luci-app-mosdns
+git clone --depth 1 https://github.com/vernesong/OpenClash.git package/lean/luci-app-openclash
+git clone --depth=1 https://github.com/sbwml/luci-app-mosdns.git package/lean/luci-app-mosdns
 
 # 添加 onliner 插件
 git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app-onliner
@@ -25,5 +25,5 @@ git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app
 # 添加 PowerOff 插件
 # git clone https://github.com/nhhqgirl/luci-app-poweroff.git package/lean/luci-app-poweroff
 
-# 添加 opentomcat 主题
-git clone --depth=1 https://github.com/nhyoungboy/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
+# 添加 argon 主题
+git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
