@@ -2,6 +2,6 @@ src-git packages https://github.com/coolsnowwolf/packages
 src-git luci https://github.com/coolsnowwolf/luci
 src-git routing https://github.com/coolsnowwolf/routing
 src-git telephony https://github.com/coolsnowwolf/telephony.git
-src-git vernesong https://github.com/vernesong/OpenClash.git
-src-git sbwml https://github.com/sbwml/luci-app-mosdns.git
+src-git vernesong https://github.com/vernesong/OpenClash
+src-git sbwml https://github.com/sbwml/luci-app-mosdns
 
