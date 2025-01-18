@@ -11,7 +11,7 @@
 #
 
 # 添加 onliner 插件
-git clone https://github.com/vernesong/OpenClash package/lean/luci-app-openclash
+git clone --depth=1 https://github.com/vernesong/OpenClash
 
 # 添加 onliner 插件
 git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app-onliner
