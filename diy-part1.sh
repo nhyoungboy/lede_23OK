@@ -9,6 +9,7 @@
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
+rm -rf feeds/luci/applications/luci-app-openclash
 
 # echo 'src-git sbwml https://github.com/sbwml/luci-app-mosdns.git' >>feeds.conf.default
 
