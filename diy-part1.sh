@@ -19,4 +19,4 @@ git clone https://github.com/nhhqgirl/luci-app-onliner.git package/lean/luci-app
 # git clone https://github.com/nhhqgirl/luci-app-poweroff.git package/lean/luci-app-poweroff
 
 # 添加 argon 主题
-# git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
